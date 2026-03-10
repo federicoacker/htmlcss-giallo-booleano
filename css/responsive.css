@@ -1,4 +1,19 @@
 /* Soluzione qui */
+/*Modalità Large Mobile */
+@media screen and (min-width:576px){
+    /*Floatiamo l'immagine a sinistra del testo e diamole un leggero margine destro
+    per spaziare il testo da essa */
+    .clearfix>img{
+        float:left;
+        margin-right:5px;
+    }
+    /*Aumentiamo la dimensione dei bottoni dei social facendogli occupare una width calcolata
+    che rispecchi lo screenshot di template */
+    .social-networks>button{
+        flex-basis: calc((100% / 5) - ((20px * 4) / 5));
+        font-size: 1.1em;
+    }
+}
 /*Modalità Tablet */
 @media screen and (min-width:768px){
     /*Spostiamo il titolo dell'header a sinistra */
@@ -36,16 +51,12 @@
         flex-basis: calc((100% / 3) - ((10px * 2) / 3));
         flex-shrink: 0;
     }
-    /*Aumentiamo la dimensione dei bottoni dei social facendogli occupare una width calcolata
-    che rispecchi lo screenshot di template */
+    /*Aumentiamo il font delle icone dei bottoni dei social */
     .social-networks>.btn{
-        flex-basis: calc((100% / 5) - ((20px * 4) / 5));
         font-size: 1.2em;
     }
-    /*Floatiamo l'immagine a sinistra del testo e diamole un leggero margine destro
-    per spaziare il testo da essa */
+    /*Aumentiamo il margine destro all'immagine*/
     .clearfix>img{
-        float:left;
         margin-right:20px;  
     }
 }
