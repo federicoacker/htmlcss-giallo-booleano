@@ -1,20 +1,29 @@
 /* Soluzione qui */
+/*Modalità Tablet */
 @media screen and (min-width:768px){
+    /*Spostiamo il titolo dell'header a sinistra */
     #topbar{
         justify-content:flex-start;
     }
+    /*Rendiamo visibile il banner publlicitario */
     .ads{
         display:block;
     }
+    /*Aumentiamo il padding del main come richiesto */
     main{
         padding:40px;
     }
+    /*Rendiamo visibile la scritta "Dolce Tradizionale */
     .recipe-origin{
         display:inline;
     }
+    /*Aumentiamo la font size del titolo della ricetta */
     .recipe-name{
         font-size:30px;
     }
+    /*Rendiamo la lista in fondo alla card un displey flex 
+    con wrap affinché vada a capo come richiesto e gli elementi si dispongano
+    a griglia*/
     .quick-notes>ul{
         display:flex;
         column-gap:10px;
@@ -22,31 +31,43 @@
         align-items:center;
         flex-wrap:wrap;
     }
+    /*Diamo un flex-basis calcolato in modo che gli elementi si dispongano in 3 colonne*/
     .quick-notes>ul li{
         flex-basis: calc((100% / 3) - ((10px * 2) / 3));
         flex-shrink: 0;
     }
+    /*Aumentiamo la dimensione dei bottoni dei social facendogli occupare una width calcolata
+    che rispecchi lo screenshot di template */
     .social-networks>.btn{
         flex-basis: calc((100% / 5) - ((20px * 4) / 5));
         font-size: 1.2em;
     }
+    /*Floatiamo l'immagine a sinistra del testo e diamole un leggero margine destro
+    per spaziare il testo da essa */
     .clearfix>img{
         float:left;
         margin-right:20px;  
     }
 }
-
+/* Modalità Desktop */
 @media screen and (min-width:992px){
+    /*Aumentiamo ancora di più la font-size del titolo della ricetta */
     .recipe-name{
         font-size:36px;
     }
+    /*Rendiamo di nuovo la lista una normalissima ul con display block invece che flex */
     .quick-notes>ul{
         display:block;
     }
+    /*Rendiamo la card della recipe un display flex in modo 
+    da allineare il video e le note sulla stessa row e diamogli una max-height 
+    in modo che non cresca a dismisura in altezza quando aumenta la width*/
     .recipe-card{
         display:flex;
         max-height:400px;
     }
+    /*Impostiamo la size di video e recipe-info usando flex-grow e 
+    dandogli una max-height */
     .recipe-video{
         flex-grow:8;
         max-height:400px;
@@ -54,16 +75,19 @@
     .recipe-info{
         flex-grow:1;
     }
+    /*Rendiamo visibile la scritta sui pulsanti dei social */
     .social-networks > .btn .label{
         display:inline;
         font-size:16px;
     }
-
+    /*Rendiamo il footer un display:flex e separiamo il tag address 
+    dal tag nav dandogli space-between come justify-content */
     body > footer {
         display:flex;
         justify-content:space-between;
     }
-
+    /*Allineamo a sinistra il testo nell'address del footer, 
+    per rispettare l'immagine di template */
     body > footer > address {
         text-align:left;
     }
